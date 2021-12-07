@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col" {{on "click" this.back}}>
+			{{fa-icon "arrow-left"}}<span class="ml-2">Retour</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="col text-center">
+			<h3>Code</h3>
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="col text-center">
+			<input type="text" class="number_input" />
+			<input type="text" class="number_input" />
+			<input type="text" class="number_input" />
+			<input type="text" class="number_input" />
+     	</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<button type="submit" class="btn btn-primary float-right mt-2" {{on "click" this.verifyCode}}>Vérifier</button>
+		</div>
+	</div>
+
+	{{#if this.isCodeError}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-danger" role="alert">
+			  Invalide
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	{{#if this.isCodeSuccess}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-success" role="alert">
+			  {{answers}}
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</div>

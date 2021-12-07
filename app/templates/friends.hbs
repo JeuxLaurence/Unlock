@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col">
+			<LinkTo @route="index" class="btn btn-danger float-right mt-2 mr-2">X</LinkTo>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col text-center {{if this.expiredTimer "text-danger"}}">
+			<p>{{timer this.time}}</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<ul class="list-group text-center">
+			  <li class="list-group-item" {{on "click" this.startGame}}><span class="mr-2">Commencer la partie</span>{{fa-icon "play"}}</li>
+			  <li class="list-group-item"><span class="mr-2">Machine</span>{{fa-icon "cog"}}</li>
+			  <li class="list-group-item"><LinkTo @route="codes" class="text-dark"><span class="mr-2">Code</span>{{fa-icon "lock"}}</LinkTo></li>
+			  <li class="list-group-item text-dark"><LinkTo @route="hints" class="text-dark"><span class="mr-2">Indices</span>{{fa-icon "lightbulb"}}</LinkTo></li>
+			  <li class="list-group-item" {{on "click" this.addPenality}}><span class="mr-2">Pénalié</span>{{fa-icon "skull-crossbones"}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
