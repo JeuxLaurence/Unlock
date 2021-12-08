@@ -10,6 +10,8 @@ Router.map(function () {
   this.route('friends');
   this.route('hints');
   this.route('codes');
-  this.route('color', { path: '/color/:cardnumber' });
-  this.route('number', { path: '/number/:cardnumber' });
+  this.route('color');
+  this.route('machines');
+  this.route('question');
+  this.route('gift');
 });

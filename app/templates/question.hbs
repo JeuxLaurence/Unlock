@@ -1,0 +1,67 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col" {{on "click" this.back}}>
+			{{fa-icon "arrow-left"}}<span class="ml-2">Retour</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="col text-center">
+			<h3>Machine #81</h3>
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="col text-center">
+     	 	<div class="card">
+			  <div class="card-body">
+			    <p class="card-text">
+			    	{{#if this.newQuestion}}
+			    		{{newQuestion}}
+			    	{{else}}
+			    		En quelle année le célèbre pilote Ken Adams a-t-il fait atterrir héroïquement un avion d'urgence?
+			    	{{/if}}
+			    </p>
+			    <div class="input-group mb-3">
+			      {{input type="text" class="form-control" placeholder="Réponse" id="answer" value=answer}}
+				</div>
+				<button class="btn btn-primary" type="button" {{on "click" this.verify}}>Vérifier</button>
+			  </div>
+			</div>
+     	</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="col text-center text-success">
+     	 	{{#if this.firstValid}}
+     	 		{{fa-icon "check"}}
+     	 	{{/if}}
+     	 	{{#if this.secondValid}}
+     	 		{{fa-icon "check"}}
+     	 	{{/if}}
+     	 	{{#if this.thirdValid}}
+     	 		{{fa-icon "check"}}
+     	 	{{/if}}
+     	</div>
+	</div>
+
+	{{#if this.isMachineError}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-danger" role="alert">
+			  Réponse invalide
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	{{#if this.isMachineSuccess}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-success" role="alert">
+			  L'employé croit que vous êtes un garde et vous laisse passer, retournez la carte 82
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</div>

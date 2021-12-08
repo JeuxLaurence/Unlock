@@ -7,19 +7,19 @@
 
 	<div class="row mb-3">
 		<div class="col text-center">
-			<h3>Code #{{@model.id}}</h3>
+			<h3>Machine 67</h3>
 		</div>
 	</div>
 
-	{{#each @model.answer as |color|}}
 	<div class="row mb-2">
 		<div class="col text-center">
+			{{#each @model.answer as |color|}}
      	 	<div class="box color-grey" {{on "click" this.nextColor}}>
      	 	</div>
+     	 	{{/each}}
      	</div>
 	</div>
-	{{/each}}
-
+	
 	<div class="row">
 		<div class="col">
 			<button type="submit" class="btn btn-primary float-right mt-2" {{on "click" this.verifyCode}}>Vérifier</button>
@@ -40,7 +40,7 @@
 	<div class="row mb-3 mt-3">
 		<div class="col text-center">
 			<div class="alert alert-success" role="alert">
-			  Tu peux maitenant tourner la(les) cartes {{model.unlock}}
+			  {{model.unlock}}
 			</div>
 		</div>
 	</div>

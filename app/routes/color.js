@@ -1,14 +1,11 @@
 import Route from '@ember/routing/route';
 
 export default class ColorRoute extends Route {
-  async model(params) {
-    var colorData = [
-      {
-        id: 1,
-        answer: ['turquoise', 'turquoise', 'turquoise', 'yellow', 'red'],
-        unlock: ['3', 'E', '67'],
-      },
-    ];
-    return colorData.filter((data) => data.id == params.cardnumber)[0];
+  async model() {
+    var colorData = {
+      answer: ['turquoise', 'turquoise', 'turquoise', 'yellow', 'red'],
+      unlock: ['Le cellulaire est déverrouillé, retournez la carte 45'],
+    };
+    return colorData;
   }
 }
