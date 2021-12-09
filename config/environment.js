@@ -4,8 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'unlock',
     environment,
-    rootURL: '/Unlock',
-    baseUrl: '/Unlock',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

@@ -5,17 +5,27 @@ export default class GiftController extends Controller {
 
   @action
   verifyMachine() {
-  	document.getElementById('empty-gift-row').hidden = true
-  	this.set('isCodeSuccess', true);
+    var result = document.getElementById('result-box').getElementsByTagName('img')
+    var isValid = this.model.answer.every(function (element, index) {
+      return result[index].src.includes(element)
+    })
+    document.getElementById('empty-gift-row').hidden = true
+    if( isValid ) {
+      this.set('isCodeSuccess', true);
+    } else {
+      this.set('isCodeError', true);
+    }  
   }
 
   @action
-  moveImageUp(image, event) {
+  moveImageUp(event) {
+    this.set('isCodeError', false);
+    this.set('isCodeSuccess', false);
+    document.getElementById('empty-gift-row').hidden = false
   	var firstEmpty = document.getElementsByClassName('empty-gift')[0]
   	firstEmpty.classList.remove('empty-gift')
-  	firstEmpty.innerHTML = "<img src='assets/images/" + image + ".png' class='gift_box' id='" + image + "'/>"
-  	event.target.parentNode.classList.add('empty-choice')
-  	event.target.parentNode.innerHTML = null
+    event.target.parentNode.classList.add('empty-choice')
+    firstEmpty.append(event.target)
   	if( document.getElementsByClassName('empty-gift').length == 0) {
   		this.verifyMachine()
   	}
@@ -23,21 +33,13 @@ export default class GiftController extends Controller {
 
   @action
   moveImageDown(event) {
-  	console.log(event.target)
-  	var elementToMove = event.target
-  	elementToMove.parentNode.classList.add('empty-gift')
-  	elementToMove.parentNode.innerHTML = null
-  	var firstEmpty = document.getElementsByClassName('empty-choice')[0]
-  	firstEmpty.classList.remove('empty-choice')
-  	firstEmpty.innerHTML = "<img src='assets/images/" + elementToMove.id + ".png' class='gift_box' />"
-  	//TODO rebind onclick once it's back down line
-  /*	var firstEmpty = document.getElementsByClassName('empty-choice')[0]
-  	firstEmpty.classList.remove('empty-gift')
-  	firstEmpty.innerHTML = "<img src='assets/images/" + image + ".png' class='gift_box' />"
-  	event.target.parentNode.innerHTML = null
-  	if( document.getElementsByClassName('empty-gift').length == 0) {
-  		this.verifyMachine()
-  	}*/
+    this.set('isCodeError', false);
+    this.set('isCodeSuccess', false);
+    document.getElementById('empty-gift-row').hidden = false
+    var firstEmpty = document.getElementsByClassName('empty-choice')[0]
+    firstEmpty.classList.remove('empty-choice')
+    event.target.parentNode.classList.add('empty-gift')
+    firstEmpty.append(event.target)
   }
 
   @action
