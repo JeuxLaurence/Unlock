@@ -9,7 +9,7 @@ export default class MachinesRoute extends Route {
       },
       {
         id: '96',
-        type: 'something',
+        type: 'aeroport',
       },
       {
         id: '95',

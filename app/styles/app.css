@@ -13,47 +13,47 @@
 }
 
 .color-grey {
-	background-color: LightGray;
+	background-color: rgb(222, 223, 225);
 }
 
 .color-blue {
-	background-color: DarkBlue;
+	background-color: rgb(1, 84, 162);
 }
 
 .color-turquoise {
-	background-color: Turquoise;
+	background-color: rgb(78, 169, 187);
 }
 
 .color-orange {
-	background-color: OrangeRed;
+	background-color: rgb(230, 174, 35);
 }
 
 .color-lime {
-	background-color: Lime;
+	background-color: rgb(118, 192, 67);
 }
 
 .color-pink {
-	background-color: DeepPink;
+	background-color: rgb(234, 20, 141);
 }
 
 .color-purple {
-	background-color: Indigo;
+	background-color: rgb(173, 108, 174);
 }
 
 .color-yellow {
-	background-color: yellow;
+	background-color: rgb(254, 237, 46);
 }
 
 .color-red {
-	background-color: red;
+	background-color: rgb(235, 33, 45);
 }
 
 .color-darkturquoise {
-	background-color: Teal;
+	background-color: rgb(44, 132, 133);
 }
 
 .color-lightblue {
-	background-color: LightBlue;
+	background-color: rgb(68, 201, 246);
 }
 
 .single-line {
