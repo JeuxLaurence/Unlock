@@ -13,7 +13,7 @@ export default class MachinesRoute extends Route {
       },
       {
         id: '95',
-        type: 'something',
+        type: 'football',
       },
       {
         id: '85',

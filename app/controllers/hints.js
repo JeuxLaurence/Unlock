@@ -9,13 +9,13 @@ export default class HintsController extends Controller {
     this.set('firstClue', null);
     this.set('secondClue', null);
     this.set('thirdClue', null);
-    this.set('showMore', false)
+    this.set('showMore', false);
     var $this = this;
     this.model.forEach(function (element, i) {
       if (element.id == $this.cardNumber.toUpperCase()) {
         $this.set('showFirst', true);
         $this.set('firstClue', element.hint[0]);
-        $this.set('showMore', element.hint.length >= 2)
+        $this.set('showMore', element.hint.length >= 2);
         return;
       }
     });
@@ -31,7 +31,7 @@ export default class HintsController extends Controller {
       if (element.id == $this.cardNumber.toUpperCase()) {
         $this.set('showFirst', true);
         $this.set('secondClue', element.hint[1]);
-        $this.set('showMore', element.hint.length >= 3)
+        $this.set('showMore', element.hint.length >= 3);
         return;
       }
     });
@@ -40,7 +40,7 @@ export default class HintsController extends Controller {
   @action
   thirdHint() {
     var $this = this;
-    $this.set('showMore', false)
+    $this.set('showMore', false);
     this.model.forEach(function (element, i) {
       if (element.id == $this.cardNumber.toUpperCase()) {
         $this.set('showFirst', true);

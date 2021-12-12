@@ -14,4 +14,6 @@ Router.map(function () {
   this.route('machines');
   this.route('question');
   this.route('gift');
+  this.route('aeroport');
+  this.route('football');
 });
