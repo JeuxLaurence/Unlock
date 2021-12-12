@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col" {{on "click" this.back}}>
+			{{fa-icon "arrow-left"}}<span class="ml-2">Retour</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="col text-center">
+			<h3>Machine #85</h3>
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="col text-center">
+     	 	<div class="card">
+			  <div class="card-body">
+			    <p class="card-text">
+			    	La construction doit tenir 3 secondes en place. Est-ce fait?
+			    </p>
+				<button class="btn btn-primary" type="button" {{on "click" this.verify}}>Oui</button>
+				<button class="btn btn-secondary" type="button" {{on "click" this.hint}}>Pas Encore</button>
+			  </div>
+			</div>
+     	</div>
+	</div>
+
+	{{#if this.isMachineError}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-danger" role="alert">
+			  Au besoin, vous pouvez aller chercher un indice
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	{{#if this.isMachineSuccess}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-success" role="alert">
+			  Vous poursuivez votre chemin, retournez la carte 57
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</div>

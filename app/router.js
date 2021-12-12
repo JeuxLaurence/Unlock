@@ -16,4 +16,5 @@ Router.map(function () {
   this.route('gift');
   this.route('aeroport');
   this.route('football');
+  this.route('card');
 });

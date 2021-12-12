@@ -17,7 +17,7 @@ export default class MachinesRoute extends Route {
       },
       {
         id: '85',
-        type: 'something',
+        type: 'card',
       },
       {
         id: '67',
