@@ -17,4 +17,5 @@ Router.map(function () {
   this.route('aeroport');
   this.route('football');
   this.route('card');
+  this.route('avion');
 });

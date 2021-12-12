@@ -29,7 +29,7 @@ export default class MachinesRoute extends Route {
       },
       {
         id: '78',
-        type: 'something',
+        type: 'avion',
       },
     ];
     return machineData;
