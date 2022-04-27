@@ -27,6 +27,6 @@ export default class MachinesController extends Controller {
   back() {
     this.set('cardNumber', null);
     this.set('isErrorNumber', false);
-    this.replaceRoute('friends');
+    this.replaceRoute('harry');
   }
 }

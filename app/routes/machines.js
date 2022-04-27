@@ -4,32 +4,36 @@ export default class MachinesRoute extends Route {
   async model() {
     var machineData = [
       {
-        id: '38',
-        type: 'gift',
+        id: '25',
+        type: 'tbd',
       },
       {
-        id: '96',
-        type: 'aeroport',
+        id: '41',
+        type: 'tbd',
       },
       {
-        id: '95',
-        type: 'football',
+        id: '50',
+        type: 'tbd',
       },
       {
-        id: '85',
-        type: 'card',
+        id: '63',
+        type: 'tbd',
       },
       {
-        id: '67',
-        type: 'color',
+        id: '88',
+        type: 'tbd',
       },
       {
-        id: '81',
-        type: 'question',
+        id: '92',
+        type: 'tbd',
       },
       {
-        id: '78',
-        type: 'avion',
+        id: '94',
+        type: 'tbd',
+      },
+      {
+        id: '99',
+        type: 'tbd',
       },
     ];
     return machineData;

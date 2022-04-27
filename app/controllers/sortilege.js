@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 
-export default class CodesController extends Controller {
+export default class SortilegeController extends Controller {
   isCodeError = false;
   isCodeSuccess = false;
 

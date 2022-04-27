@@ -18,4 +18,7 @@ Router.map(function () {
   this.route('football');
   this.route('card');
   this.route('avion');
+  //Harry Potter
+  this.route('harry');
+  this.route('sortilege')
 });

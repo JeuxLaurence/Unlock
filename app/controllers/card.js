@@ -18,6 +18,6 @@ export default class CardController extends Controller {
   back() {
     this.set('isMachineError', false);
     this.set('isMachineSuccess', false);
-    this.replaceRoute('friends');
+    this.replaceRoute('harry');
   }
 }
