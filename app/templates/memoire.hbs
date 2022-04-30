@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="row mt-3">
+		<div class="col" {{on "click" this.back}}>
+			{{fa-icon "arrow-left"}}<span class="ml-2">Retour</span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col text-center">
+			<h3>Machine 99</h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col" id="memory-full-box">
+			{{#each this.memoryCardList as |memoryCard|}}
+				<div class="mbox" {{on "click" this.revealCard}}>
+					<img src="assets/images/AM{{memoryCard}}.jpg" class="border border-dark memory_box hidden-memory">
+	     	 	</div>
+			{{/each}}
+		</div>
+	</div>
+
+	{{#if this.isCodeError}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-danger" role="alert">
+			  Invalide
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	{{#if this.isCodeSuccess}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-success" role="alert">
+			  Vous vous cachez derrière un arbre de la forêt interdite! Retournez la carte 18.
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</div>

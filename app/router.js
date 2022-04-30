@@ -28,4 +28,5 @@ Router.map(function () {
   this.route('empreinte')
   this.route('echec')
   this.route('hagrid')
+  this.route('memoire')
 });
