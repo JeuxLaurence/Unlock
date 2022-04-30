@@ -24,7 +24,7 @@
 
 .hidden-memory {
 	padding: 66px 66px 0px 0px;
-	background: url('images/unknown.png');
+	background: url('/images/unknown.png');
 	background-size:auto; 
 	width:0px; 
 	height: 0px !important;
@@ -32,7 +32,7 @@
 
 .empty-memory {
 	padding: 66px 66px 0px 0px;
-	background: url('images/empty.png');
+	background: url('assets/images/empty.png');
 	background-size:auto; 
 	width:0px; 
 	height: 0px !important;
