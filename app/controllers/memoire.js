@@ -4,16 +4,16 @@ import { action } from '@ember/object';
 export default class MemoireController extends Controller {
 
   memoryCardList = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5'
+    'AM1-782fc21c5489f33c572994822be647f1.jpg',
+    'AM2-5a2cd1e5595cb6aea5755269bfdd3200.jpg',
+    'AM3-d11c647c4a9f5c58dc195b21e52f0f64.jpg',
+    'AM4-1123403a3afa79d1fd75897d43f45664.jpg',
+    'AM5-33ab583db896bf0a5f528dd289eb82be.jpg',
+    'AM1-782fc21c5489f33c572994822be647f1.jpg',
+    'AM2-5a2cd1e5595cb6aea5755269bfdd3200.jpg',
+    'AM3-d11c647c4a9f5c58dc195b21e52f0f64.jpg',
+    'AM4-1123403a3afa79d1fd75897d43f45664.jpg',
+    'AM5-33ab583db896bf0a5f528dd289eb82be.jpg'
   ];
 
   init() {

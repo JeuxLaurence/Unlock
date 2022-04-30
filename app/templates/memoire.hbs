@@ -15,7 +15,7 @@
 		<div class="col" id="memory-full-box">
 			{{#each this.memoryCardList as |memoryCard|}}
 				<div class="mbox" {{on "click" this.revealCard}}>
-					<img src="assets/images/AM{{memoryCard}}.jpg" class="border border-dark memory_box hidden-memory">
+					<img src="assets/images/{{memoryCard}}" class="border border-dark memory_box hidden-memory">
 	     	 	</div>
 			{{/each}}
 		</div>
