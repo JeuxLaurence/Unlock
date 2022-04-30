@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col" {{on "click" this.back}}>
+			{{fa-icon "arrow-left"}}<span class="ml-2">Retour</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="col text-center">
+			<h3>Machine #50</h3>
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="col text-center">
+     	 	<div class="card">
+     	 	  <img src="assets/images/50.jpg">
+			  <div class="card-body">
+			    <p class="card-text">
+			    	Les escaliers pivotent! Il faut créer un chemin entre la Grande Salle et le portrait de La Grosse Dame. Aucun escalier ne peut rester incomplet. Est-ce terminé?
+			    </p>
+			    <button class="btn btn-primary" type="button" {{on "click" this.verify}}>Oui</button>
+				<button class="btn btn-secondary" type="button" {{on "click" this.hint}}>Pas Encore</button>
+			  </div>
+			</div>
+     	</div>
+	</div>
+
+	{{#if this.isMachineError}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-danger" role="alert">
+			  Réponse invalide
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	{{#if this.isMachineSuccess}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-success" role="alert">
+			  La Grosse Dame vous accueille et dévoile une porte, retournez la carte 44.
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</div>

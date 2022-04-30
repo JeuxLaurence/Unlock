@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col" {{on "click" this.back}}>
+			{{fa-icon "arrow-left"}}<span class="ml-2">Retour</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="col text-center">
+			<h3>Machine #88</h3>
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="col text-center">
+     	 	<div class="card">
+     	 	  <img src="assets/images/88.jpg">
+			  <div class="card-body">
+			    <p class="card-text">
+			    	Des empreintes au sol! Derrière quelle porte est allé Sirius?
+			    </p>
+			    <div class="input-group mb-3">
+			      {{input type="text" class="form-control" placeholder="Réponse" id="answer" value=answer}}
+				</div>
+				<button class="btn btn-primary" type="button" {{on "click" this.verify}}>Vérifier</button>
+			  </div>
+			</div>
+     	</div>
+	</div>
+
+	{{#if this.isMachineError}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-danger" role="alert">
+			  Réponse invalide
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	{{#if this.isMachineSuccess}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-success" role="alert">
+			  Les traces vous guident au coeur de la Cabane Hurlante. Retournez la carte 32.
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</div>
