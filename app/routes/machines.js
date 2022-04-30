@@ -5,35 +5,35 @@ export default class MachinesRoute extends Route {
     var machineData = [
       {
         id: '25',
-        type: 'tbd',
+        type: 'chiffre',
       },
       {
         id: '41',
-        type: 'tbd',
+        type: 'patronus',
       },
       {
         id: '50',
-        type: 'tbd',
+        type: 'escalier',
       },
       {
         id: '63',
-        type: 'tbd',
+        type: 'souvenir',
       },
       {
         id: '88',
-        type: 'tbd',
+        type: 'empreinte',
       },
       {
         id: '92',
-        type: 'tbd',
+        type: 'echec',
       },
       {
         id: '94',
-        type: 'tbd',
+        type: 'hagrid',
       },
       {
         id: '99',
-        type: 'tbd',
+        type: 'memoire',
       },
     ];
     return machineData;

@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col" {{on "click" this.back}}>
+			{{fa-icon "arrow-left"}}<span class="ml-2">Retour</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="col text-center">
+			<h3>Machine #94</h3>
+		</div>
+	</div>
+
+	<div class="row mb-2">
+		<div class="col text-center">
+     	 	<div class="card">
+     	 	  <img src="assets/images/94.jpg">
+			  <div class="card-body">
+			    <p class="card-text">
+			    	L’encre révèle une carte unique, laquelle de ces huttes appartient à Hagrid?
+			    </p>
+			    <div class="input-group mb-3">
+			      {{input type="text" class="form-control" placeholder="Réponse" id="answer" value=answer}}
+				</div>
+				<button class="btn btn-primary" type="button" {{on "click" this.verify}}>Vérifier</button>
+			  </div>
+			</div>
+     	</div>
+	</div>
+
+	{{#if this.isMachineError}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-danger" role="alert">
+			  Réponse invalide
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	{{#if this.isMachineSuccess}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-success" role="alert">
+			  Oui c'est ici! Vous arrivez chez Hagrid à la course. Retournez la carte 69.
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</div>

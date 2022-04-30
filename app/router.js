@@ -21,4 +21,11 @@ Router.map(function () {
   //Harry Potter
   this.route('harry');
   this.route('sortilege')
+  this.route('chiffre')
+  this.route('patronus')
+  this.route('escalier')
+  this.route('souvenir')
+  this.route('empreinte')
+  this.route('echec')
+  this.route('hagrid')
 });
