@@ -1,7 +1,10 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default class EscalierController extends Controller {
+  @service('global') globalService;
+
   @action
   verify() {
     this.set('isMachineSuccess', true);
@@ -18,6 +21,6 @@ export default class EscalierController extends Controller {
   back() {
     this.set('isMachineError', false);
     this.set('isMachineSuccess', false);
-    this.replaceRoute('harry');
+    this.replaceRoute(this.globalService.currentUnlock);
   }
 }

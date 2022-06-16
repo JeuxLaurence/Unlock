@@ -1,7 +1,9 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default class MemoireController extends Controller {
+  @service('global') globalService;
 
   memoryCardList = [
     'AM1-782fc21c5489f33c572994822be647f1.jpg',
@@ -61,6 +63,6 @@ export default class MemoireController extends Controller {
   back() {
     this.set('isCodeSuccess', false);
     this.set('isCodeError', false);
-    this.replaceRoute('harry');
+    this.replaceRoute(this.globalService.currentUnlock);
   }
 }

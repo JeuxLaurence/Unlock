@@ -1,7 +1,10 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default class SortilegeController extends Controller {
+  @service('global') globalService;
+  
   isCodeError = false;
   isCodeSuccess = false;
 
@@ -20,6 +23,9 @@ export default class SortilegeController extends Controller {
     var $this = this;
     var answerIndex;
     var result = this.model.some(function (model_element, model_index) {
+      if( model_element.mode != $this.globalService.currentUnlock) {
+        return false;
+      }
       var allMatch = model_element.answer.every(function (element, index) {
         return element == numberResult[index];
       });
@@ -43,6 +49,6 @@ export default class SortilegeController extends Controller {
   back() {
     this.set('isCodeError', false);
     this.set('isCodeSuccess', false);
-    this.replaceRoute('harry');
+    this.replaceRoute(this.globalService.currentUnlock);
   }
 }
