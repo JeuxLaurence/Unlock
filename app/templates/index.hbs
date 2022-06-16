@@ -4,7 +4,13 @@
     <div class="card" style="width: 18rem;" >
 	  <img src="assets/images/harryPotterMain.jpg" class="card-img-top" alt="Harry Potter Unlock">
 	  <div class="card-body">
-	    <LinkTo @route="harry" class="btn btn-primary stretched-link">Go</LinkTo>
+	    <button class="btn btn-primary stretched-link" {{action "setUnlock" "harry"}}>Go</button>
+	  </div>
+	</div>
+	<div class="card" style="width: 18rem;" >
+	  <img src="assets/images/jumanjiMain.jpg" class="card-img-top" alt="Jumanji Unlock">
+	  <div class="card-body">
+	    <button class="btn btn-primary stretched-link" {{action "setUnlock" "jumanji"}}>Go</button>
 	  </div>
 	</div>
 </div>

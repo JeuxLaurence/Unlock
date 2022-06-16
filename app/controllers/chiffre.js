@@ -1,7 +1,9 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default class ChiffreController extends Controller {
+  @service('global') globalService;
   selectedShoot = null;
 
   @action
@@ -20,6 +22,6 @@ export default class ChiffreController extends Controller {
     this.set('isMachineError', false);
     this.set('isMachineSuccess', false);
     this.set('answer', null);
-    this.replaceRoute('harry');
+    this.replaceRoute(this.globalService.currentUnlock);
   }
 }
