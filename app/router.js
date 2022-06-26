@@ -29,4 +29,6 @@ Router.map(function () {
   this.route('echec')
   this.route('hagrid')
   this.route('memoire')
+  //Jumanji
+  this.route('jumanji')
 });

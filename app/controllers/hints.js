@@ -1,7 +1,10 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default class HintsController extends Controller {
+  @service('global') globalService;
+  
   @action
   fetchHints() {
     this.set('isErrorNumber', false);
@@ -12,7 +15,7 @@ export default class HintsController extends Controller {
     this.set('showMore', false);
     var $this = this;
     this.model.forEach(function (element, i) {
-      if (element.id == $this.cardNumber.toUpperCase()) {
+      if (element.id == $this.cardNumber.toUpperCase() && element.mode == $this.globalService.currentUnlock) {
         $this.set('showFirst', true);
         $this.set('firstClue', element.hint[0]);
         $this.set('showMore', element.hint.length >= 2);
@@ -58,6 +61,6 @@ export default class HintsController extends Controller {
     this.set('firstClue', null);
     this.set('secondClue', null);
     this.set('thirdClue', null);
-    this.replaceRoute('friends');
+    this.replaceRoute(this.globalService.currentUnlock);
   }
 }

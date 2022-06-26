@@ -6,7 +6,7 @@ export default class SortilegeRoute extends Route {
       {
         answer: ['K', '2', '8'],
         unlock: ["Le jet de lumière réveille Dumbledore. Retournez la carte 27."],
-        mode: "hardry"
+        mode: "harry"
       },
       {
         answer: ['C', '9', '3'],
