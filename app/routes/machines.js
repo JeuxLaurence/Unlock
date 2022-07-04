@@ -52,6 +52,21 @@ export default class MachinesRoute extends Route {
         id: '35',
         type: 'generic',
         mode: 'jumanji'
+      },
+      {
+        id: '51',
+        type: 'generic',
+        mode: 'jumanji'
+      },
+      {
+        id: '62',
+        type: 'generic',
+        mode: 'jumanji'
+      },
+      {
+        id: '66',
+        type: 'generic',
+        mode: 'jumanji'
       }
     ];
     return machineData;
