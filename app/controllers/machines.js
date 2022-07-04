@@ -13,7 +13,11 @@ export default class MachinesController extends Controller {
     this.model.forEach(function (element, i) {
       if (element.id == $this.cardNumber && element.mode == $this.globalService.currentUnlock) {
         $this.isSuccess = true;
-        $this.transitionToRoute(element.type);
+        if( 'generic' == element.type) {
+          $this.transitionToRoute(element.type, element.id);
+        } else {
+          $this.transitionToRoute(element.type);
+        }
         return;
       }
     });

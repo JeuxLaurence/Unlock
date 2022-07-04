@@ -31,4 +31,5 @@ Router.map(function () {
   this.route('memoire')
   //Jumanji
   this.route('jumanji')
+  this.route('generic', { path: '/generic/:machine_id'})
 });

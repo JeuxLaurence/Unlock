@@ -43,6 +43,11 @@ export default class MachinesRoute extends Route {
         type: 'memoire',
         mode: 'harry'
       },
+      {
+        id: '19',
+        type: 'generic',
+        mode: 'jumanji'
+      }
     ];
     return machineData;
   }
