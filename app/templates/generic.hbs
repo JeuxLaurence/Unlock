@@ -21,8 +21,8 @@
 			    </p>
 			    <div class="input-group mb-3">
 			      {{input type="text" class="form-control" placeholder="Réponse" id="answer" value=answer}}
-			      {{#if this.model.answerType == 'two'}}
-			      {{input type="text" class="form-control" placeholder="Réponse" id="answer2" value=answer}}
+			      {{#if (eq this.model.answerType "two")}}
+			      	{{input type="text" class="form-control" placeholder="Réponse" id="answer2" value=answer2}}
 			      {{/if}}
 				</div>
 				<button class="btn btn-primary" type="button" {{on "click" this.verify}}>Vérifier</button>
