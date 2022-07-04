@@ -86,7 +86,7 @@ export default class CodesRoute extends Route {
         mode: "jumanji"
       },
       {
-        answer: ['4', '9', '3', '8'],
+        answer: ['9', '5', '7', '4'],
         unlock: [
           "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
         ],
