@@ -86,51 +86,51 @@ export default class CodesRoute extends Route {
         mode: "jumanji"
       },
       {
-        answer: ['9', '5', '7', '4'],
+        answer: ['8', '4', '9', '7'],
         unlock: [
-          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
+          "La caisse enregistreuse s’ouvre! Retournez la carte 24.",
         ],
         mode: "jumanji"
       },
       {
-        answer: ['4', '9', '3', '8'],
+        answer: ['1', '5', '1', '5'],
         unlock: [
-          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
+          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 13 et 88.",
         ],
         mode: "jumanji"
       },
       {
-        answer: ['4', '9', '3', '8'],
+        answer: ['2', '1', '6', '3'],
         unlock: [
-          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
+          "Le compartiment s’ouvre et vous trouvez deux dés. Ils semblent étranges. Retournez la carte 35.",
         ],
         mode: "jumanji"
       },
       {
-        answer: ['4', '9', '3', '8'],
+        answer: ['6', '3', '5', '9'],
         unlock: [
-          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
+          "La vieille armoire s’ouvre et vous trouvez un objet. Retournez la carte 56.",
         ],
         mode: "jumanji"
       },
       {
-        answer: ['4', '9', '3', '8'],
+        answer: ['4', '2', '8', '6'],
         unlock: [
-          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
+          "La porte du grenier s’ouvre. Retournez la carte 14.",
         ],
         mode: "jumanji"
       },
       {
-        answer: ['4', '9', '3', '8'],
+        answer: ['8', '0', '4', '3'],
         unlock: [
-          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
+          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 31 et 54.",
         ],
         mode: "jumanji"
       },
       {
-        answer: ['4', '9', '3', '8'],
+        answer: ['5', '0', '6', '4'],
         unlock: [
-          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
+          "La porte du sous-sol s’ouvre. Retournez la carte 77.",
         ],
         mode: "jumanji"
       }

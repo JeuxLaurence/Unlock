@@ -18,7 +18,7 @@ export default class GenericRoute extends Route {
         id: '35',
         image: '/Unlock/assets/images/35_des.jpg',
         question: 'Par déduction, quels sont les deux chiffres manquant sur chacun de ces dés?',
-        answer: ["5", "3"], //TODO: Put correct answer here
+        answer: ["2", "1"],
         answerType: 'two',
         response: 'Les dés sont bons! Retournez la carte 71.',
         mode: 'jumanji'
