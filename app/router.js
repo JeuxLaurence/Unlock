@@ -32,4 +32,5 @@ Router.map(function () {
   //Jumanji
   this.route('jumanji')
   this.route('generic', { path: '/generic/:machine_id'})
+  this.route('ballerina')
 });

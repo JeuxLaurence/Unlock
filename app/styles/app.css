@@ -90,3 +90,22 @@
     margin-right: 3px;
     padding-left: 20px;
 }
+
+#image-ballerina{position:absolute;z-index:1;}
+
+#image-container{
+    display:inline-block;
+    width:600px; 
+    height:319px;
+    margin: 0 auto; 
+    background: black; 
+    position:relative; 
+    border:5px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 50px #333
+}
+
+#peintureCanvas{
+    position:relative;
+    z-index:20;
+}
