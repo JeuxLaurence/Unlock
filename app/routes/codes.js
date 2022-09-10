@@ -72,6 +72,13 @@ export default class CodesRoute extends Route {
         mode: "jumanji"
       },
       {
+        answer: ['9', '5', '7', '4'],
+        unlock: [
+          "C’est la bonne réponse. Une nouvelle menace sort du jeu. Retournez les cartes 38 et 48.",
+        ],
+        mode: "jumanji"
+      },
+      {
         answer: ['6', '8', '5', '2'],
         unlock: [
           "Le réfrigérateur s’ouvre! Mais il est en désordre. Retournez la carte 27.",
