@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="row mt-3 mb-3">
+		<div class="col" {{on "click" this.back}}>
+			{{fa-icon "arrow-left"}}<span class="ml-2">Retour</span>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="col text-center">
+			<h3>Game Over</h3>
+		</div>
+	</div>
+
+
+	<div class="row mb-2">
+		<div class="col text-center">
+     	 	<div class="card">
+			  <div class="card-body gameover-choice">
+			    <p class="card-text">
+			    	{{currentQuestion}}
+			    </p>
+			    <div class="row my-3">
+				    <div class="col bg-success mr-3 pt-2" role="button" {{on "click" this.isFirst}}>
+				      {{currentChoiceOne}}
+				    </div>
+				    <div class="col bg-danger pt-2" role="button" {{on "click" this.isSecond}}>
+				      {{currentChoiceTwo}}
+				    </div>
+  				</div>
+				<div class="row">
+					<div class="col bg-warning mr-3 pt-2" role="button" {{on "click" this.isThird}}>
+				      {{currentChoiceThree}}
+				    </div>
+					<div class="col bg-primary pt-2" role="button" {{on "click" this.isFourth}}>
+				      {{currentChoiceFour}}
+				    </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	{{#if this.isMachineError}}
+	<div class="row mb-3 mt-3">
+		<div class="col text-center">
+			<div class="alert alert-danger" role="alert">
+			  Réponse invalide
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	<BsModalSimple
+	  @open={{this.gameoverModal}}
+	  @size="sm"
+	  @onHidden={{this.back}}>
+	  Bonne réponse!
+	</BsModalSimple>
+</div>

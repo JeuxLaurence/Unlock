@@ -14,11 +14,7 @@ export default class CodesController extends Controller {
     this.set('isCodeSuccess', false);
 
     var numberResult = [];
-    Array.from(document.getElementsByClassName('number_input')).forEach(
-      function (element) {
-        numberResult.push(element.value);
-      }
-    );
+    numberResult = Array.from(document.getElementsByClassName('number_input')[0].value);
 
     var $this = this;
     var answerIndex;

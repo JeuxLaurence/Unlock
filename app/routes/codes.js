@@ -140,6 +140,41 @@ export default class CodesRoute extends Route {
           "La porte du sous-sol s’ouvre. Retournez la carte 77.",
         ],
         mode: "jumanji"
+      },
+      {
+        answer: ['6', '2', '8', '7'],
+        unlock: [
+          "Le casier s'ouvre. Retournez la carte 40.",
+        ],
+        mode: "mario"
+      },
+      {
+        answer: ['4', '2', '0', '1'],
+        unlock: [
+          "Vous terminez le tableau et arrivez au boss. Retournez la carte 11.",
+        ],
+        mode: "mario"
+      },
+      {
+        answer: ['8', '5', '0', '9'],
+        unlock: [
+          "Vous déverrouillez la Wii et entrez dans Super Smash Bros Brawl. Retournez la carte 7.",
+        ],
+        mode: "mario"
+      },
+      {
+        answer: ['2', '0', '0', '5'],
+        unlock: [
+          "Les joueurs sont prêts, le combat commence. Retournez la carte 92.",
+        ],
+        mode: "mario"
+      },
+      {
+        answer: ['2', '9', '4', '5'],
+        unlock: [
+          "Vous remportez Booksquirm! Retournez la carte 18.",
+        ],
+        mode: "mario"
       }
     ];
     return codeData;

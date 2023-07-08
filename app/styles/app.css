@@ -109,3 +109,7 @@
     position:relative;
     z-index:20;
 }
+
+.gameover-choice .col {
+	height: 50px;
+}

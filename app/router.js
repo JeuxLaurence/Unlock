@@ -33,4 +33,7 @@ Router.map(function () {
   this.route('jumanji')
   this.route('generic', { path: '/generic/:machine_id'})
   this.route('ballerina')
+  //Mario
+  this.route('mario')
+  this.route('gameover')
 });
