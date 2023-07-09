@@ -180,6 +180,7 @@ export default class GameoverRoute extends Route {
     controller.set('model', chosenModel);
   }
 
+  //TODO: Handle if no question left + add reset option to readd them all
   findUnansweredQuestion(model) {
     var usedQuestions = JSON.parse(localStorage.getItem('usedQuestion'))
     var possibleIndex = [];

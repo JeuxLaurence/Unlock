@@ -72,6 +72,41 @@ export default class MachinesRoute extends Route {
         id: '17',
         type: 'ballerina',
         mode: 'jumanji'
+      },
+      {
+        id: '57',
+        type: 'generic',
+        mode: 'mario'
+      },
+      {
+        id: '84',
+        type: 'generic',
+        mode: 'mario'
+      },
+      {
+        id: '64',
+        type: 'generic',
+        mode: 'mario'
+      },
+      {
+        id: '67',
+        type: 'generic',
+        mode: 'mario'
+      },
+      {
+        id: '88',
+        type: 'generic',
+        mode: 'mario'
+      },
+      {
+        id: '74',
+        type: 'generic',
+        mode: 'mario'
+      },
+      {
+        id: '71',
+        type: 'generic',
+        mode: 'mario'
       }
     ];
     return machineData;

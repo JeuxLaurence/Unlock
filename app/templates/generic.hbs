@@ -14,18 +14,168 @@
 	<div class="row mb-2">
 		<div class="col text-center">
      	 	<div class="card">
+     	 	  {{#unless (eq this.model.answerType "pdf")}}
      	 	  <img src="{{this.model.image}}" style="width: 100%; height: auto;">
+     	 	  {{/unless}}
 			  <div class="card-body">
 			    <p class="card-text">
 			    	{{this.model.question}}
 			    </p>
-			    <div class="input-group mb-3">
-			      {{input type="text" class="form-control" placeholder="Réponse" id="answer" value=answer}}
-			      {{#if (eq this.model.answerType "two")}}
-			      	{{input type="text" class="form-control" placeholder="Réponse" id="answer2" value=answer2}}
-			      {{/if}}
-				</div>
-				<button class="btn btn-primary" type="button" {{on "click" this.verify}}>Vérifier</button>
+				{{#if (eq this.model.answerType "hint")}}
+					<button class="btn btn-outline-success" type="button" {{on "click" this.nextHint}}><span class="green-question">{{fa-icon "question"}}</span>Indice trouvé</button>
+					<ul class="list-group">
+						{{#each this.hints as |hint|}}
+							<li class="list-group-item">{{hint}}</li>
+						{{/each}}
+					</ul>
+				{{/if}}
+				{{#if (eq this.model.answerType "pdf")}}
+					<a class="btn btn-primary" target="_blank" href="{{@model.image}}">Ouvrir</a>
+				{{/if}}
+				{{#if (eq this.model.answerType "single")}}
+					<div class="input-group mb-3">
+				      {{input type="text" class="form-control" placeholder="Réponse" id="answer" value=answer}}
+					</div>
+					<button class="btn btn-primary" type="button" {{on "click" this.verify}}>Vérifier</button>
+				{{/if}}
+				{{#if (eq this.model.answerType "color")}}
+					<div>
+						<div class='yoshi yoshi-white' role="button" {{on "click" this.selectColor}}></div>
+						<div class='yoshi yoshi-yellow' role="button" {{on "click" this.selectColor}}></div>
+						<div class='yoshi yoshi-blue' role="button" {{on "click" this.selectColor}}></div>
+						<div class='yoshi yoshi-pink' role="button" {{on "click" this.selectColor}}></div>
+					</div>
+					<br>
+					<div>
+						<div class='yoshi yoshi-red' role="button" {{on "click" this.selectColor}}></div>
+						<div class='yoshi yoshi-cyan' role="button" {{on "click" this.selectColor}}></div>
+						<div class='yoshi yoshi-green' role="button" {{on "click" this.selectColor}}></div>
+						<div class='yoshi yoshi-black' role="button" {{on "click" this.selectColor}}></div>
+					</div>
+					<button class="btn btn-primary" type="button" {{on "click" this.verifyColor}}>Vérifier</button>
+				{{/if}}
+				{{#if (eq this.model.answerType "twoSelect")}}
+					<div class="input-group mb-3">
+					  Monde: 
+					  <select id="monde-select">
+					    <option value="0">---</option>
+					  	<option value="1">1</option>
+					  	<option value="2">2</option>
+					  	<option value="3">3</option>
+					  	<option value="4">4</option>
+					  </select>
+					  Tableau:
+				      <select id="tableau-select">
+				        <option value="0">---</option>
+					  	<option value="1">1</option>
+					  	<option value="2">2</option>
+					  	<option value="3">3</option>
+					  	<option value="4">4</option>
+					  </select>
+					</div>
+					<button class="btn btn-primary" type="button" {{on "click" this.verifySelect}}>Vérifier</button>
+				{{/if}}
+				{{#if (eq this.model.answerType "twoColumn")}}
+					<div class="input-group mb-3">
+					  A: 
+					  <select class="column-select">
+					    <option value="0">---</option>
+					  	<option value="A1">1</option>
+					  	<option value="A2">2</option>
+					  	<option value="A3">3</option>
+					  	<option value="A4">4</option>
+					  	<option value="A5">5</option>
+					  	<option value="A6">6</option>
+					  	<option value="A7">7</option>
+					  	<option value="A8">8</option>
+					  </select>
+					  B: 
+					  <select class="column-select">
+					    <option value="0">---</option>
+					  	<option value="B1">1</option>
+					  	<option value="B2">2</option>
+					  	<option value="B3">3</option>
+					  	<option value="B4">4</option>
+					  	<option value="B5">5</option>
+					  	<option value="B6">6</option>
+					  	<option value="B7">7</option>
+					  	<option value="B8">8</option>
+					  </select>
+					  C: 
+					  <select class="column-select">
+					    <option value="0">---</option>
+					  	<option value="C1">1</option>
+					  	<option value="C2">2</option>
+					  	<option value="C3">3</option>
+					  	<option value="C4">4</option>
+					  	<option value="C5">5</option>
+					  	<option value="C6">6</option>
+					  	<option value="C7">7</option>
+					  	<option value="C8">8</option>
+					  </select>
+					  D: 
+					  <select class="column-select">
+					    <option value="0">---</option>
+					  	<option value="D1">1</option>
+					  	<option value="D2">2</option>
+					  	<option value="D3">3</option>
+					  	<option value="D4">4</option>
+					  	<option value="D5">5</option>
+					  	<option value="D6">6</option>
+					  	<option value="D7">7</option>
+					  	<option value="D8">8</option>
+					  </select>
+					  E: 
+					  <select class="column-select">
+					    <option value="0">---</option>
+					  	<option value="E1">1</option>
+					  	<option value="E2">2</option>
+					  	<option value="E3">3</option>
+					  	<option value="E4">4</option>
+					  	<option value="E5">5</option>
+					  	<option value="E6">6</option>
+					  	<option value="E7">7</option>
+					  	<option value="E8">8</option>
+					  </select>
+					  F: 
+					  <select class="column-select">
+					    <option value="0">---</option>
+					  	<option value="F1">1</option>
+					  	<option value="F2">2</option>
+					  	<option value="F3">3</option>
+					  	<option value="F4">4</option>
+					  	<option value="F5">5</option>
+					  	<option value="F6">6</option>
+					  	<option value="F7">7</option>
+					  	<option value="F8">8</option>
+					  </select>
+					  G: 
+					  <select class="column-select">
+					    <option value="0">---</option>
+					  	<option value="G1">1</option>
+					  	<option value="G2">2</option>
+					  	<option value="G3">3</option>
+					  	<option value="G4">4</option>
+					  	<option value="G5">5</option>
+					  	<option value="G6">6</option>
+					  	<option value="G7">7</option>
+					  	<option value="G8">8</option>
+					  </select>
+					  H: 
+					  <select class="column-select">
+					    <option value="0">---</option>
+					  	<option value="H1">1</option>
+					  	<option value="H2">2</option>
+					  	<option value="H3">3</option>
+					  	<option value="H4">4</option>
+					  	<option value="H5">5</option>
+					  	<option value="H6">6</option>
+					  	<option value="H7">7</option>
+					  	<option value="H8">8</option>
+					  </select>
+					  <button class="btn btn-primary" type="button" {{on "click" this.verifyColumn}}>Vérifier</button>
+					</div>
+				{{/if}}
 			  </div>
 			</div>
      	</div>
