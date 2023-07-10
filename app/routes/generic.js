@@ -32,7 +32,7 @@ export default class GenericRoute extends Route {
         id: '67',
         image: '/Unlock/assets/images/67_donkey.jpg',
         question: 'Il faut sauver la Princesse Peach! Les tonneaux de Donkey Kong dévalent en suivant la première échelle qu\'ils croisent. À quel endroit doit se placer Mario afin d\'être sain et sauf?',
-        answer: 'B',
+        answer: 'D',
         answerType: 'single',
         response: 'Vous battez Donkey Kong, il laisse tomber un objet! Retournez la carte 2.',
         mode: 'mario'
@@ -44,7 +44,7 @@ export default class GenericRoute extends Route {
         question: 'Bébé Mario a voyagé avec tous les yoshis sauf un, quelle est sa couleur?',
         answer: 'yoshi-yellow',
         answerType: 'color',
-        response: 'Excellent! Retournez la carte 22',
+        response: 'Excellent! Retournez les cartes 22 et 26',
         mode: 'mario'
     };
     genericMachineData[74] = 
@@ -54,7 +54,7 @@ export default class GenericRoute extends Route {
         question: 'Vous êtes dans le jeu Super Mario Land, mais dans quel monde et quel tableau? Mario doit sauter sous les quatre cubes ? le plus rapidement possible.',
         answer: ['3', '3'],
         answerType: 'twoSelect',
-        response: 'C\'est bon! Retournez la carte 48',
+        response: 'C\'est bon! Retournez les cartes 48 et 9',
         mode: 'mario'
     };
     genericMachineData[71] = 
@@ -62,15 +62,15 @@ export default class GenericRoute extends Route {
         id: '71',
         image: '/Unlock/assets/images/71_item.jpg',
         question: 'Afin de gagner la course finale, vous devrez être alerte aux armes de vos adversaires. Associez chaque arme à son joueur.',
-        answer: ['A7', 'B1', 'C6', 'D5', 'E3', 'F8', 'G4', 'H2'],
+        answer: ['A7', 'B5', 'C6', 'D1', 'E3', 'F8', 'G4', 'H2'],
         answerType: 'twoColumn',
         response: 'C\'est bon! Vous commencez la course finale, retournez la carte 93.',
         mode: 'mario'
     };
    /* genericMachineData[19] = 
       {
-      	id: '19',
-      	image: '/Unlock/assets/images/19_cle_etrange.jpg',
+        id: '19',
+        image: '/Unlock/assets/images/19_cle_etrange.jpg',
         question: 'Laquelle de ces clés étranges est la bonne?',
         answer: 'K',
         answerType: 'single',

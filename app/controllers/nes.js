@@ -67,10 +67,6 @@ export default class NesController extends Controller {
 
   @action
   back() {
-    this.set('isMachineError', false);
-    this.set('isMachineSuccess', false);
-    this.set('answer', null);
-    this.set('hints', A());
     this.replaceRoute(this.globalService.currentUnlock);
   }
 }
