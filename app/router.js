@@ -36,4 +36,5 @@ Router.map(function () {
   //Mario
   this.route('mario')
   this.route('gameover')
+  this.route('nes')
 });

@@ -107,6 +107,11 @@ export default class MachinesRoute extends Route {
         id: '71',
         type: 'generic',
         mode: 'mario'
+      },
+      {
+        id: '40',
+        type: 'nes',
+        mode: 'mario'
       }
     ];
     return machineData;

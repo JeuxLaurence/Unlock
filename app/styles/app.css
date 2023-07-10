@@ -179,3 +179,97 @@
 	margin-left: 5px;
 	margin-right: 15px;
 }
+
+.cases {
+	position: absolute;
+	width: 20%;
+	height: 25%;
+}
+
+.case12 {
+	left: 20%;
+}
+
+.case13 {
+	left: 40%;
+}
+
+.case14 {
+	left: 60%;
+}
+
+.case15 {
+	left: 80%;
+}
+
+.case21 {
+	top: 25%;
+}
+
+.case22 {
+	left: 20%;
+	top: 25%;
+}
+
+.case23 {
+	left: 40%;
+	top: 25%;
+}
+
+.case24 {
+	left: 60%;
+	top: 25%;
+}
+
+.case25 {
+	left: 80%;
+	top: 25%;
+}
+
+.case31 {
+	top: 50%;
+}
+
+.case32 {
+	left: 20%;
+	top: 50%;
+}
+
+.case33 {
+	left: 40%;
+	top: 50%;
+}
+
+.case34 {
+	left: 60%;
+	top: 50%;
+}
+
+.case35 {
+	left: 80%;
+	top: 50%;
+}
+
+.case41 {
+	top: 75%;
+}
+
+.case42 {
+	left: 20%;
+	top: 75%;
+}
+
+.case43 {
+	left: 40%;
+	top: 75%;
+}
+
+.case44 {
+	left: 60%;
+	top: 75%;
+}
+
+.case45 {
+	left: 80%;
+	top: 75%;
+}
