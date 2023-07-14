@@ -62,6 +62,10 @@ export default class GameoverController extends Controller {
     localStorage.setItem('usedQuestion', JSON.stringify(usedQuestions))
   }
 
+  @action resetQuestions() {
+    localStorage.setItem("usedQuestion", null)
+  }
+
   @action
   back() {
     this.set('isMachineError', false);

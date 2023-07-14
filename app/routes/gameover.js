@@ -82,83 +82,76 @@ export default class GameoverRoute extends Route {
       },
       {
         id: "12",
-        question: "Qui est le cousin de Mario?",
-        choice: ["Waluigi", "Wario", "Luigi", "Luigeena"],
-        answer: "Luigeena",
-        mode: "mario"
-      },
-      {
-        id: "13",
         question: "Combien de jeu de Mario Party existe-il?",
         choice: ["10", "13", "15", "17"],
         answer: "17",
         mode: "mario"
       },
       {
-        id: "14",
+        id: "13",
         question: "Lequel de ces personnages ne fait pas partit de la famille Kong?",
         choice: ["Cranky", "Funky", "Chunky", "Spunky"],
         answer: "Spunky",
         mode: "mario"
       },
       {
-        id: "15",
+        id: "14",
         question: "En quelle année est né le personnage de Mario?",
         choice: ["1981", "1983", "1985", "1990"],
         answer: "1983",
         mode: "mario"
       },
       {
-        id: "16",
+        id: "15",
         question: "Quel est le dé de Peach dans Super Mario Party?",
         choice: ["1-3-3-3-5-6", "1-1-1-5-6-7", "0-2-4-4-4-6", "0-1-3-5-5-7"],
         answer: "0-2-4-4-4-6",
         mode: "mario"
       },
       {
-        id: "17",
+        id: "16",
         question: "Lequel de ces noms n’est pas un acolyte de Bowser?",
         choice: ["Kimmy", "Larry", "Wendy", "Iggy"],
         answer: "Kimmy",
         mode: "mario"
       },
       {
-        id: "18",
+        id: "17",
         question: "Daisy est la princesse de quel royaume?",
         choice: ["Mushroom Kingdom", "Sarasaland", "Flowerland", "Daisyland"],
         answer: "Sarasaland",
         mode: "mario"
       },
       {
-        id: "19",
+        id: "18",
         question: "Combien de choix de combattant y avait-il dans le premier Super Smash Bros?",
         choice: ["8", "12", "16", "20"],
         answer: "12",
         mode: "mario"
       },
       {
-        id: "20",
+        id: "19",
         question: "Lequel de ces noms n’est pas un Minigame de Mario Party?",
         choice: ["Crazy cutter", "Treasure seeker", "Pipe Maze", "Nut cases"],
         answer: "Treasure seeker",
         mode: "mario"
       },
       {
-        id: "21",
+        id: "20",
         question: "Au maximum, combien de secondes a Yoshi pour reprendre Bébé Mario avant qu’il se fasse enlever dans Yoshi’s Island?",
         choice: ["10", "20", "30", "60"],
         answer: "30",
         mode: "mario"
       },
       {
-        id: "22",
+        id: "21",
         question: "Dans combien de jeux différents sur la console Gamecube apparait Mario?",
         choice: ["8", "12", "14", "24"],
         answer: "14",
         mode: "mario"
       },
       {
-        id: "23",
+        id: "22",
         question: "Que mord Waluigi lorsqu’il est victorieux?",
         choice: ["Une rose", "Son bras", "Son chapeau", "Une clé anglais"],
         answer: "Une rose",
@@ -184,7 +177,7 @@ export default class GameoverRoute extends Route {
   findUnansweredQuestion(model) {
     var usedQuestions = JSON.parse(localStorage.getItem('usedQuestion'))
     var possibleIndex = [];
-    for(var i=1; i <= 23; i++) {
+    for(var i=1; i <= 22; i++) {
       if( usedQuestions == null || !usedQuestions.includes(i.toString())) {
         possibleIndex.push(i)
       }
@@ -193,6 +186,10 @@ export default class GameoverRoute extends Route {
     var chosenModel = model.find(function(value,b,c){
       return value.id == chosenIndex
     })
+    if( chosenModel == null) {
+      localStorage.setItem("usedQuestion", null)
+      return this.findUnansweredQuestion(model)
+    }
     return chosenModel
   }
 }
